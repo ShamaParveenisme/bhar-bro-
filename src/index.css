@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #0c0f17;
+    color: #f8fafc;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+.font-display {
+  font-family: 'Bricolage Grotesque', -apple-system, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-mono-numbers {
+  font-family: 'Space Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes floatMeme {
+  0% { transform: translateY(0px) scale(0.9); opacity: 0; }
+  20% { transform: translateY(-10px) scale(1.05); opacity: 1; }
+  80% { transform: translateY(-25px) scale(1); opacity: 1; }
+  100% { transform: translateY(-40px) scale(0.95); opacity: 0; }
+}
+
+.animate-meme-float {
+  animation: floatMeme 1.8s ease-out forwards;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.6)); }
+  50% { filter: drop-shadow(0 0 24px rgba(34, 197, 94, 0.9)); }
+}
+
+.glow-shield {
+  animation: pulseGlow 1.4s infinite ease-in-out;
+}
